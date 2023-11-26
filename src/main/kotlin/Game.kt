@@ -1,10 +1,10 @@
-class Game {
+import com.google.gson.annotations.SerializedName
 
-    var title = ""
-    var cover = ""
-    var description = ""
+class Game(@SerializedName("title") private val title: String,@SerializedName("thumb")  private val cover: String) {
+
+    private val description = ""
 
     override fun toString(): String {
-        return "Game(title='$title', cover='$cover', description='$description')"
+        return "Game(title = $title, cover = $cover, description = $description)"
     }
 }
