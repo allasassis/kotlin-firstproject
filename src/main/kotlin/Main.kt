@@ -10,5 +10,7 @@ fun main() {
         .build()
 
     val response = client.send(request, HttpResponse.BodyHandlers.ofString())
-    println(response.body())
+    val myGame = Game()
+
+    println(myGame)
 }
