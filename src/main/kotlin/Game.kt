@@ -1,6 +1,4 @@
-import com.google.gson.annotations.SerializedName
-
-class Game(@SerializedName("title") private val title: String,@SerializedName("thumb")  private val cover: String) {
+class Game(private val title: String, private val cover: String) {
 
     private val description = ""
 

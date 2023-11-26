@@ -10,6 +10,7 @@ fun main() {
     val response = client.send(request, HttpResponse.BodyHandlers.ofString())
 
     val gson = Gson()
-    val myGame = gson.fromJson(response.body(), InfoGame::class.java)
+    val infoGame = gson.fromJson(response.body(), InfoGame::class.java)
+    val myGame = Game(infoGame.info.title, infoGame.info.thumb)
     println(myGame)
 }
